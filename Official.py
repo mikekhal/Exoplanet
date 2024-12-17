@@ -10,15 +10,7 @@ import numpy as np
 def process_tpf(file_path, period_range=(1, 20), window_length=901, frequency_factor=500, max_planets=2, plot_xlim=(-1, 1)):
     """
     Function to process a TESS Target Pixel File, search for multiple transit signals, and plot results.
-    
-    Parameters:
-    - file_path: Path to the target pixel file.
-    - period_range: Tuple (min_period, max_period) to define the range of periods for the BLS search.
-    - window_length: Length of the window used to flatten the light curve.
-    - frequency_factor: Factor used to calculate the number of frequencies for BLS search.
-    - max_planets: Maximum number of planets to detect.
-    - plot_xlim: Range for x-axis when plotting folded light curves.
-    """
+
     # Load and plot the target pixel file
     tpf = TessTargetPixelFile(file_path)
     tpf.plot()
